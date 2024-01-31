@@ -1,25 +1,39 @@
 {
   "name": "koishi-plugin-everything",
   "description": "feat(market): bulk install everything",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
-    "dist"
+    "dist",
+    "src",
+    "client"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
+  "koishi": {
+    "services": {
+      "optional": ["notifier"],
+      "required": ["console"]
+    }
+  },
   "devDependencies": {
-    "@koishijs/client": "^5.27.2"
+    "@koishijs/client": "^5.27.6",
+    "@koishijs/plugin-market": "^2.10.6"
   },
   "peerDependencies": {
-    "@koishijs/plugin-console": "^5.27.2",
+    "@koishijs/plugin-console": "^5.27.6",
+    "@koishijs/plugin-notifier": "^1.2.0",
     "koishi": "^4.16.7"
+  },
+  "peerDependenciesMeta": {
+    "@koishijs/plugin-notifier": {
+      "optional": true
+    }
   }
 }

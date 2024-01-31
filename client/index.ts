@@ -1,12 +1,12 @@
 import { Context } from '@koishijs/client'
-import Page from './page.vue'
+import Everything from './everything-page.vue'
 
 import 'virtual:uno.css'
 
 export default (ctx: Context) => {
   ctx.page({
-    name: '扩展页面',
-    path: '/custom-page',
-    component: Page,
+    name: 'Everything',
+    path: '/everything-page',
+    component: Everything,
   })
 }
